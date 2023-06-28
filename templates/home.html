@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="mainpage.html">
+  <style>
+    .card {
+      background-color: lightgray;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+    }
+    button{
+      margin-left: 20px;
+    }
+    body{
+      background-image: url(../static/image/home.jpg);
+    }
+    </style>
+</head>
+
+<body>
+  <h1 style="color: white;">Car data</h1>
+  {% for key, value in args.items() %}
+  {% if value['status'] == 'unsold' %}
+  
+  <div class="card">
+      <div><strong>Registration Number:</strong> {{ key }}</div>
+      <div><strong>Car Model:</strong> {{ value['Carmodel'] }}</div>
+      <div><strong>Owner Name:</strong> {{ value['Ownername'] }}</div>
+      <div><strong>Company Name:</strong> {{ value['Companyname'] }}</div>
+      <div><strong>Kilometers:</strong> {{ value['Kms'] }}</div>
+      <div><strong>Ownership:</strong> {{ value['ownership'] }}</div>
+      <div><strong>Owner Phone Number:</strong> {{ value['ownermobileno'] }}</div>
+      <div><strong>Expected Price:</strong> {{ value['expectedprice'] }}</div>
+      <div><strong>Status:</strong> {{ value['Status'] }}</div>
+      <div><strong>Posted Date:</strong> {{ value['posteddate'] }}</div>
+      <div><strong>Email:</strong> {{ value['email'] }}</div>
+  </div>
+  {% endif %}
+  {% endfor %} <br>
+  <a href="/"><button type="button">Back</button></a>
+
+  
+</body>
+</html>

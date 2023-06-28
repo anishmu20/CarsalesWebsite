@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+  <style>
+    body{
+      background-image: url(../static/image/supra.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    select{
+      margin-left: 500px;
+      padding: 6px;
+      margin-top: 200px;
+    }
+    button{
+      margin-top: 200px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+  <form method="POST">
+    <select name="c">
+      <option value="Carmodel">Carmodel</option>
+      <option value="Companyname">Companyname</option>
+      <option value="Expectedprice">Expectedprice</option>
+    </select>
+    <input style="padding: 6px;" type="text" name="f">
+    <button type="submit">Search</button>
+  </form>
+  
+</body>
+</html>
