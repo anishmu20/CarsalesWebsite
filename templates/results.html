@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >Search Results</title>
+  <link rel="stylesheet10" href="index.html">
+  <style>
+    .card{
+      background-color: lightgrey;
+      display: inline-block;
+      
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      max-width: 500px;
+      margin-left: 20px;
+
+    }
+    .card-row{
+      display: flex;
+      /* justify-content: space-around; */
+      margin-bottom: 5px;
+    }
+    button{
+      margin-left: 20px;
+      color: blue;
+    }
+    body{
+      background-image: url(../static/image/ba.jpeg);
+      background-size: 100%;
+
+    }
+    
+  </style>
+</head>
+<body>
+  <h1 style="color: whitesmoke;">Search Results</h1>
+  {% for car in cars %}
+  <div class="card">
+    <div class="card-row"><strong>Registration Number:</strong>{{car[0]}}</div>
+    <div class="card-row"><strong>Car  Model:</strong>{{car[1]}}</div>
+    <div class="card-row"><strong>Owner Name:</strong>{{car[2]}}</div>
+    <div class="card-row"><strong>Companyname:</strong>{{car[3]}}</div>
+    <div class="card-row"><strong>Kilometers:</strong>{{car[4]}}</div>
+    <div class="card-row"><strong>Ownership:</strong>{{car[5]}}</div>
+    <div class="card-row"><strong>OwnerPhNo :</strong>{{car[6]}}</div>
+    <div class="card-row"><strong>Expectedprice:</strong>{{car[7]}}</div>
+    <div class="card-row"><strong>Status:</strong>{{car[8]}}</div>
+    <div class="card-row"><strong>Posted Date:</strong>{{car[9]}}</div>
+    
+  </div>
+  {% endfor %} <br>
+  <a href="/"><button type="submit">Back</button></a>
+</body>
+</html>
